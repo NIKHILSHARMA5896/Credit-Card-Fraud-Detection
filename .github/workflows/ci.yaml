@@ -38,6 +38,8 @@ jobs:
           AWS_ACCESS_KEY: ${{ secrets.AWS_ACCESS_KEY }}
           AWS_SECRET_KEY: ${{ secrets.AWS_SECRET_KEY }}
           BUCKET_NAME: ${{ secrets.BUCKET_NAME }}
+        run: |
+          echo "Bucket Name is : $BUCKET_NAME"
 
       # - name: Run model tests
       #   env:

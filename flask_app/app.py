@@ -19,29 +19,29 @@ logger = logging.getLogger(__name__)
 # Below code block is for production use
 # -------------------------------------------------------------------------------------
 # Set up DagsHub credentials for MLflow tracking
-# dagshub_token = os.getenv("CAPSTONE_TEST")
-# if not dagshub_token:
-#     raise EnvironmentError("CAPSTONE_TEST environment variable is not set")
+dagshub_token = os.getenv("CAPSTONE_TEST")
+if not dagshub_token:
+    raise EnvironmentError("CAPSTONE_TEST environment variable is not set")
 
-# os.environ["MLFLOW_TRACKING_USERNAME"] = dagshub_token
-# os.environ["MLFLOW_TRACKING_PASSWORD"] = dagshub_token
+os.environ["MLFLOW_TRACKING_USERNAME"] = dagshub_token
+os.environ["MLFLOW_TRACKING_PASSWORD"] = dagshub_token
 
-# dagshub_url = "https://dagshub.com"
-# repo_owner = "vikashdas770"
-# repo_name = "learnyard-capstone-project1"
-# # Set up MLflow tracking URI
-# mlflow.set_tracking_uri(f'{dagshub_url}/{repo_owner}/{repo_name}.mlflow')
+dagshub_url = "https://dagshub.com"
+repo_owner = "NIKHILSHARMA5896"
+repo_name = "Credit-Card-Fraud-Detection"
+# Set up MLflow tracking URI
+mlflow.set_tracking_uri(f'{dagshub_url}/{repo_owner}/{repo_name}.mlflow')
 # -------------------------------------------------------------------------------------
 
 
 # ----------------------------------------------
 # Below code block is for loacl use
 # ----------------------------------------------
-MLFLOW_TRACKING_URI = "https://dagshub.com/NIKHILSHARMA5896/Credit-Card-Fraud-Detection.mlflow"
+# MLFLOW_TRACKING_URI = "https://dagshub.com/NIKHILSHARMA5896/Credit-Card-Fraud-Detection.mlflow"
 
-# # Set up MLflow tracking
-mlflow.set_tracking_uri(MLFLOW_TRACKING_URI)
-dagshub.init(repo_owner="NIKHILSHARMA5896", repo_name="Credit-Card-Fraud-Detection", mlflow=True)
+# # # Set up MLflow tracking
+# mlflow.set_tracking_uri(MLFLOW_TRACKING_URI)
+# dagshub.init(repo_owner="NIKHILSHARMA5896", repo_name="Credit-Card-Fraud-Detection", mlflow=True)
 
 
 

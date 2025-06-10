@@ -33,6 +33,13 @@ jobs:
         run: |
           dvc repro
 
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key: ${{ secrets.AWS_ACCESS_KEY }}
+          aws-secret-key: ${{ secrets.AWS_SECRET_KEY }}
+          bucket-name: ${{ secrets.BUCKET_NAME }}
+
       # - name: Run model tests
       #   env:
       #     CAPSTONE_TEST: ${{ secrets.CAPSTONE_TEST }}

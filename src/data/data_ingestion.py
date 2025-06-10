@@ -36,7 +36,7 @@ def save_data(df: pd.DataFrame, data_path: str) -> None:
 
 def main():
     try:
-        bucket_name = os.getenv("BUCKET_NAME")
+        bucket_name = "credit-card-mlops-bucket"
         aws_access_key = os.getenv("AWS_ACCESS_KEY")
         aws_secret_key = os.getenv("AWS_SECRET_KEY")
         FILE_KEY = "creditcard.csv"  # Path inside S3 bucket

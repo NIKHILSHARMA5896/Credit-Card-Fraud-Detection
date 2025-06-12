@@ -6,7 +6,6 @@ import pandas as pd
 import mlflow
 import dagshub
 from flask import Flask, render_template, request
-from src.logger import logging
 #from prometheus_client import Counter, Histogram, generate_latest, CollectorRegistry, CONTENT_TYPE_LATEST
 import time
 

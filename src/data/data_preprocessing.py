@@ -57,7 +57,7 @@ def main():
     try:
         params = load_params('./params.yaml')
         test_size = params['data_preprocessing']['test_size']
-        # test_size = .20
+        ## test_size = .20
 
         # Fetch the raw data
         df = pd.read_csv('./data/raw/data.csv')

@@ -44,7 +44,7 @@ def main():
         s3 = s3_connection.s3_operations(bucket_name, aws_access_key, aws_secret_key)
         df = s3.fetch_file_from_s3(FILE_KEY)
 
-        #df = load_data(data_url="https://raw.githubusercontent.com/vikashishere/Datasets/refs/heads/main/creditcard.csv")
+        ##df = load_data(data_url="https://raw.githubusercontent.com/vikashishere/Datasets/refs/heads/main/creditcard.csv")
 
         if df is None:
             logging.error("Data fetching failed, received None. Exiting.")

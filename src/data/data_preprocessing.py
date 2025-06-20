@@ -61,7 +61,6 @@ def main():
 
         # Fetch the raw data
         df = pd.read_csv('./data/raw/data.csv')
-        #df = pd.read_csv('./data/raw/creditcard.csv')
         logging.info('Raw data loaded successfully')
         
         # Preprocess the data
